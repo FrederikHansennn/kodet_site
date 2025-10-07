@@ -1,49 +1,49 @@
-/* RESET */
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-/* HERO WRAPPER */
+/* Hero sektion */
 .hero {
+  height: 100vh;      /* desktop */
+  min-height: 100svh; /* stabil på mobil */
   position: relative;
-  height: 100vh;
   overflow: hidden;
 }
 
-/* HERO IMAGE (img-metoden) */
+/* Hero-billede */
 .hero-img {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: -2;
 }
 
-/* HERO OVERLAY */
+/* Mørk overlay */
 .hero-overlay {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
 }
 
-/* TOP NAV */
+/* TOP NAV skal ligge over logoet */
 .topbar {
   position: absolute;
-  top: 16px;
+  top: 12px;                 /* lidt tættere på toppen */
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
-  z-index: 2;
+  z-index: 3;                /* over logo */
 }
 
 .nav {
@@ -53,35 +53,55 @@ html, body {
   align-items: center;
 }
 
-/* KK LOGO */
 .kk-logo {
   position: absolute;
-  top: 40px;
+  top: 72px;                 /* <- vigtig: placer under nav */
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3;
-  display: block;
+  z-index: 1;                /* bag nav, men foran billedet */
+  display: inline-block;
   line-height: 0;
 }
 
 .kk-logo img {
-  height: 40px;
+  height: 32px;              /* lille som i prototypen */
   width: auto;
+  display: block;
 }
 
-/* TEKST NEDERST */
+
+/* Tekst i hero */
 .hero-content {
   position: absolute;
+  bottom: 12vh;
   left: 50%;
-  bottom: clamp(28px, 10vh, 120px);
   transform: translateX(-50%);
-  width: min(90%, 900px);
-  text-align: left;
+  text-align: center;
+  width: 80%;
+  z-index: 2;
 }
 
-/* MEDIA QUERIES */
-@media (max-width: 700px) {
-  .kk-logo { top: 52px; }
-  .nav { gap: 18px; flex-wrap: wrap; justify-content: center; }
-  .hero-content { width: 92%; }
+/* 🔹 Mobil (≤ 600px) */
+@media (max-width: 600px) {
+  .hero {
+    height: 92vh; /* lidt lavere på mobil */
+  }
+
+  .nav {
+    gap: 16px;
+    row-gap: 8px;
+    padding: 8px 10px;
+    flex-wrap: wrap;
+  }
+
+  .kk-logo { top: 40px; }
+
+  .kk-logo img { height: 26px; }
+
+  .hero-content {
+    bottom: 9vh;
+    width: 92%;
+  }
 }
+
+

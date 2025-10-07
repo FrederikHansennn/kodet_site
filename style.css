@@ -1,10 +1,11 @@
 /* BASIS */
+/* ====== BASIS (desktop som standard) ====== */
 body {
   font-family: "Merriweather", serif;
   color: #fff;
 }
 
-/* HERO OVERLAY */
+/* HERO OVERLAY – farve/effekt */
 .hero-overlay {
   background: linear-gradient(
     to top,
@@ -15,7 +16,7 @@ body {
   );
 }
 
-/* NAV LINKS */
+/* NAV LINKS – udseende (ikke placering) */
 .nav a {
   color: rgba(255,255,255,0.9);
   text-decoration: none;
@@ -24,15 +25,12 @@ body {
   font-size: clamp(14px, 1.3vw, 18px);
   transition: opacity 0.2s ease;
 }
-
 .nav a:hover { opacity: 0.8; }
 
-/* KK LOGO (look) */
-.kk-logo img {
-  opacity: 0.9;
-}
+/* LOGO – visuel finpudsning */
+.kk-logo img { opacity: 0.9; }
 
-/* OVERSKRIFT */
+/* OVERSKRIFT – outline look */
 .site-title {
   margin: 0 0 12px 0;
   font-family: "Oswald", sans-serif;
@@ -52,4 +50,37 @@ body {
   line-height: 1.6;
   color: rgba(255,255,255,0.95);
   text-shadow: 0 2px 8px rgba(0,0,0,0.65);
+}
+
+/* ====== MOBIL (≤ 600px) – kun styling ====== */
+@media (max-width: 600px) {
+  /* lidt mørkere overlay for bedre kontrast på små skærme */
+  .hero-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.75) 0%,
+      rgba(0,0,0,0.45) 40%,
+      rgba(0,0,0,0.10) 70%,
+      rgba(0,0,0,0.00) 100%
+    );
+  }
+
+  /* reducer outline og typografi en smule */
+  .site-title {
+    font-size: clamp(28px, 10vw, 56px);
+    -webkit-text-stroke: 1.3px rgba(255,255,255,0.75);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.55);
+  }
+
+  .lead {
+    font-size: 14px;
+    line-height: 1.55;
+    max-width: 48ch; /* behagelig læselinie på mobil */
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  }
+
+  /* nav-typografi (må gerne være en anelse mindre på mobil) */
+  .nav a {
+    font-size: 14px;
+  }
 }
