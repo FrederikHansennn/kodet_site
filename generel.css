@@ -55,16 +55,17 @@
 
 .kk-logo {
   position: absolute;
-  top: 72px;                 /* <- vigtig: placer under nav */
+  top: 50px;            /* ændret fra 72px */
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;                /* bag nav, men foran billedet */
+  z-index: 1;
   display: inline-block;
   line-height: 0;
 }
 
+
 .kk-logo img {
-  height: 32px;              /* lille som i prototypen */
+  height: 60px;   /* prøv fx 60px eller 80px */
   width: auto;
   display: block;
 }
@@ -81,10 +82,83 @@
   z-index: 2;
 }
 
+/*Til musik-site*/
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.content-grid article{
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:10px;
+  padding:20px;
+  min-height:320px;              /* så rækkerne bliver jævne */
+  display:flex;
+  flex-direction:column;
+  row-gap:12px;                  /* kompakt lodret afstand */
+  text-align:center;
+}
+
+
+.content-grid article h2{
+  font-weight:700;
+  font-size:clamp(18px,1.4vw,22px);
+  margin:0 0 6px;
+}
+.content-grid article p{
+  margin:0;                      /* nulstil default */
+  line-height:1.5;
+  opacity:.95;
+  max-width:36ch;                /* kortere linjelængde = mere kompakt */
+  margin-inline:auto;            /* centrer p’er */
+}
+
+/* Knap */
+.content-grid article a{
+  align-self:center;
+  display:inline-block;
+  padding:10px 18px;
+  border:2px solid rgba(255,255,255,.85);
+  border-radius:9999px;
+  text-decoration:none;
+  color:#fff;
+  margin-top:auto;               /* skub knappen ned mod bunden */
+}
+
+header {
+  padding: 20px 0; /* giver luft i headeren */
+}
+
+main {
+  margin-top: 80px; /* skubber hele main ned under header */
+}
+
+
+main h1 {
+  margin-top: 140px;   /* prøv 120px–160px afhængigt af logoets størrelse */
+  margin-bottom: 40px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+
+
+
+
 /* 🔹 Mobil (≤ 600px) */
 @media (max-width: 600px) {
   .hero {
     height: 92vh; /* lidt lavere på mobil */
+  }
+.content-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;          /* lidt mindre afstand på mobil er ofte pænt */
+    padding: 0 12px;    /* lidt mindre side-padding på mobil */
   }
 
   .nav {
@@ -102,6 +176,11 @@
     bottom: 9vh;
     width: 92%;
   }
+
+
 }
+
+
+
 
 

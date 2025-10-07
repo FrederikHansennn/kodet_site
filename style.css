@@ -1,8 +1,7 @@
-/* BASIS */
-/* ====== BASIS (desktop som standard) ====== */
+/* GLOBALT */
 body {
   font-family: "Merriweather", serif;
-  color: #fff;
+  color: #fff; /* husk: kræver mørk baggrund på sider hvor du bruger hvid tekst */
 }
 
 /* HERO OVERLAY – farve/effekt */
@@ -50,6 +49,14 @@ body {
   line-height: 1.6;
   color: rgba(255,255,255,0.95);
   text-shadow: 0 2px 8px rgba(0,0,0,0.65);
+}
+
+/* === MUSIK-SIDEN (KLASSE PÅ <body>) === */
+/* Denne linje var tidligere inde i media query – nu er den global, så teksten ikke “forsvinder” */
+body.musik-site {
+  background-color: #25283D;
+  /* hvis dine almindelige links ikke er tydelige, kan du tilføje: */
+  /* a { color: #fff; } */
 }
 
 /* ====== MOBIL (≤ 600px) – kun styling ====== */
