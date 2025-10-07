@@ -1,24 +1,57 @@
 <!DOCTYPE html>
 <html lang="da">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Københavns Kulturportal</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Københavns Kulturportal</title>
+
+  <!-- Fonte (kun til styling) -->
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="generel.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header></header>
-<main>
-<section>
-<div>
-    <h1>Københavns Kulturportal</h1>
-<p></p>
-</div>
-<img src="" alt="" />
-</section>
-<section> </section>
-</main>
-<footer></footer>
+  <!-- HERO -->
+  <section class="hero">
+    <!-- Top navigation -->
+    <header class="topbar">
+      <nav class="nav">
+        <a href="#">Musik</a>
+        <a href="#">Scenekunst</a>
+        <a href="#">Udstillinger</a>
+        <a href="#">Shows</a>
+        <a href="#">Sport</a>
+        <a href="#">Mad/Drikke</a>
+        <a href="#">Natteliv</a>
+        <a href="#">Markeder</a>
+      </nav>
+    </header>
+
+    <!-- Klikbart logo, lille og centreret -->
+    <a href="index.html" class="kk-logo">
+      <img src="logo.png" alt="Københavns Kulturportal logo">
+    </a>
+
+    <!-- Hero-billede -->
+    <img class="hero-img" src="chatgpt-forsidebillede.png" alt="Koncertstemning i København"/>
+
+    <!-- Mørk gradient overlay for bedre læsbarhed -->
+    <div class="hero-overlay"></div>
+
+    <!-- Tekst nederst på billedet -->
+    <div class="hero-content">
+      <h1 class="site-title">KøbenhavnsKulturportal</h1>
+      <p class="lead">
+        For københavnere, af københavnere. Kulturportalen giver dig overblikket over alt fra musik og teater til sport og mad,
+        kun det, der rører sig i byen lige nu. Gå på opdagelse på portalen og se hvad der rør sig i byen lige nu.
+      </p>
+    </div>
+  </section>
+
+  <main>
+    <!-- resten af siden -->
+  </main>
 
 </body>
 </html>
