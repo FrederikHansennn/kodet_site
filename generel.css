@@ -25,6 +25,12 @@
   z-index: -2;
 }
 
+.hero p {
+  max-width: 700px;   /* prøv 600–700px for læsbarhed */
+  margin: 0 auto;     /* centrerer boksen horisontalt */
+}
+
+
 /* Mørk overlay */
 .hero-overlay {
   position: absolute;
@@ -145,6 +151,48 @@ main h1 {
   font-size: 1.3rem;
   font-weight: 400;
 }
+
+/* Tablet: ca. iPad liggende + små laptops */
+@media (max-width: 1024px) {
+
+  /* 1) Gør 3-kolonne grid til 2 kolonner */
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;           /* en anelse tættere */
+    padding: 0 20px;     /* lidt mere luft i siderne */
+    max-width: 900px;    /* smallere container føles mere kompakt */
+  }
+
+  /* 2) Kort – lidt lavere minimumshøjde */
+  .content-grid article {
+    min-height: 280px;
+    padding: 18px;
+  }
+
+  /* 3) H1 på undersider – en tand mindre */
+  main h1 {
+    font-size: 1.1rem;
+    margin-bottom: 28px;
+  }
+
+  /* 4) Hero-tekst (forsiden) – smallere linjelængde */
+  .hero .lead {
+    max-width: 60ch;
+    font-size: 0.95rem;
+  }
+
+  /* 5) Navigation – lidt mindre afstand mellem links */
+  .nav {
+    gap: clamp(16px, 4.5vw, 48px);
+  }
+}
+
+
+
+
+
+
+
 
 
 

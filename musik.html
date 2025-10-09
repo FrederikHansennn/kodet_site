@@ -6,14 +6,45 @@
     <title>Musik portalen</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="generel.css">
+    <link rel="stylesheet" href="burger.css">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<meta name="description" content="Se koncertoversigten i København – find events, spillesteder og køb billetter til aktuelle musikoplevelser.">
+   
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<!-- Android/Chrome icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+
+
+
+
 </head>
 <body class="musik-site">
 <header class="topbar">
+  <button class="burger">
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="line"></span>
+    <span class="sr-only">Menu</span>
+  </button>
+
+
       <nav class="nav">
         <a href="musik.html">Musik</a>
         <a href="#">Scenekunst</a>
         <a href="#">Udstillinger</a>
-        <a href="#">Shows</a>
+        <a href="show.html">Shows</a>
         <a href="#">Sport</a>
         <a href="#">Mad/Drikke</a>
         <a href="#">Natteliv</a>
@@ -81,6 +112,7 @@
 </article>
 </section>
     </main>
-    
+    <script src="burger.js" defer></script>
+
 </body>
 </html>

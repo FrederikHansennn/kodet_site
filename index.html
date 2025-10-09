@@ -5,9 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Københavns Kulturportal</title>
 
-  <!-- Fonte (kun til styling) -->
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="generel.css" />
+  <!-- Fonte -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+
+<!-- Android/Chrome icons -->
+<link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
+
+<meta name="description" content="Københavns Kulturportal giver dig overblikket over musik, teater, sport og events i byen lige nu.">
+
+
+
+  <!-- CSS: rækkefølge så hero/topbar i style.css kan overstyre burger ved behov -->
+  <link rel="stylesheet" href="generel.css">
+  <link rel="stylesheet" href="burger.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,11 +35,20 @@
   <section class="hero">
     <!-- Top navigation -->
     <header class="topbar">
-      <nav class="nav">
+      <!-- Burger-knap (vises kun på mobil via burger.css) -->
+      <button class="burger" aria-controls="primary-nav" aria-expanded="false">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <!-- Navigation -->
+      <nav class="nav" id="primary-nav">
         <a href="musik.html">Musik</a>
         <a href="#">Scenekunst</a>
         <a href="#">Udstillinger</a>
-        <a href="#">Shows</a>
+        <a href="show.html">Shows</a>
         <a href="#">Sport</a>
         <a href="#">Mad/Drikke</a>
         <a href="#">Natteliv</a>
@@ -28,7 +56,7 @@
       </nav>
     </header>
 
-    <!-- Klikbart logo, lille og centreret -->
+    <!-- Klikbart logo, centreret -->
     <a href="index.html" class="kk-logo">
       <img src="logo.png" alt="Københavns Kulturportal logo">
     </a>
@@ -53,5 +81,7 @@
     <!-- resten af siden -->
   </main>
 
+  <!-- Burger JS -->
+  <script src="burger.js" defer></script>
 </body>
 </html>

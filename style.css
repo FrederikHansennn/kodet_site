@@ -1,8 +1,14 @@
 /* GLOBALT */
 body {
-  font-family: "Merriweather", serif;
+  font-family: "robotto serif", serif;
   color: #fff; /* husk: kræver mørk baggrund på sider hvor du bruger hvid tekst */
 }
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
 
 /* HERO OVERLAY – farve/effekt */
 .hero-overlay {
@@ -58,6 +64,14 @@ body.musik-site {
   /* hvis dine almindelige links ikke er tydelige, kan du tilføje: */
   /* a { color: #fff; } */
 }
+
+body.show-site {
+  background-color: #25283D;  /* samme mørke som musik-siden */
+}
+
+
+
+
 
 /* ====== MOBIL (≤ 600px) – kun styling ====== */
 @media (max-width: 600px) {

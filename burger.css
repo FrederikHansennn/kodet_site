@@ -1,0 +1,84 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* === TOPBAR === */
+.topbar {
+  /* behold absolute/z-index fra dit eget style.css til forsiden */
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+/* === NAVIGATION LINKS === */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(24px, 6vw, 80px);
+}
+
+.nav a {
+  display: block;
+  padding: 10px 0;
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+}
+
+/* === BURGER-KNAP === */
+.burger {
+  width: 30px;
+  height: 22px;
+  display: none;            /* skjules på desktop */
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  left: 16px;
+  top: 12px;
+  z-index: 1001;            /* over alt andet i header */
+}
+
+.burger .line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 6px;
+  transition: 0.2s linear;
+}
+.burger .line:last-child { margin-bottom: 0; }
+
+.burger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.burger.active .line:nth-child(2) {
+  opacity: 0;
+}
+.burger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* === MOBILVERSION === */
+@media (max-width: 800px) {
+  .burger { display: block; }
+  .nav { display: none; }            /* skjul menu på mobil */
+
+  .nav.active {
+    display: block;
+    position: absolute;
+    top: 94px;                       /* under topbaren/logo */
+    left: 0;
+    width: 100%;
+    background-color: #25283D;
+    padding: 12px 20px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  .nav.active a {
+    display: block;
+    padding: 12px 0;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+  .nav.active a:last-child { border-bottom: 0; }
+}
