@@ -59,6 +59,17 @@
   align-items: center;
 }
 
+.nav a.active {
+  color: #FF956B;
+  font-weight: 700;
+  border-bottom: 2px solid #FF956B;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+
+
+
 .kk-logo {
   position: absolute;
   top: 50px;            /* ændret fra 72px */
